@@ -1,4 +1,4 @@
-# Job Search Agent Notes
+﻿# Job Search Agent Notes
 
 ## Candidate Background
 - Candidate: Yihan / Richard project context.
@@ -52,3 +52,12 @@
   - `resume_variants/`
   - `applications_tracker.md`
   - `interview_prep/`
+
+## Cross-Device GitHub Sync Protocol
+- Windows local GitHub clone path: `[OneDrive Documents]\GitHub\Slingshot\slingshot`.
+- Use this GitHub repository as the bridge between Mac and Windows work.
+- When the user gives a clear start signal for a work session, first run `git pull` in the repository to fetch the latest Mac/remote changes before reading or editing project files.
+- During the session, make changes in the GitHub clone unless the user explicitly points to another workspace.
+- When the user gives a clear end/finish signal for the session, review changes, then `git add`, `git commit`, and `git push` the completed work to GitHub.
+- If `git` is unavailable in PATH or authentication/push fails, report the blocker immediately and do not silently skip sync.
+
